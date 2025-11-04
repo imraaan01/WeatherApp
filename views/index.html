@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App - Find Your Forecast</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="weather-background">
+      <div class="clouds">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="weather-icon-header">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="12" cy="12" r="5" />
+          <line x1="12" y1="1" x2="12" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="23" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+          <line x1="1" y1="12" x2="3" y2="12" />
+          <line x1="21" y1="12" x2="23" y2="12" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </svg>
+      </div>
+
+      <h1>Weather Forecast</h1>
+      <p class="subtitle">Discover the weather in your city</p>
+
+      <form action="/" method="post">
+        <div class="input-group">
+          <svg
+            class="input-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          <input
+            type="text"
+            name="CityName"
+            placeholder="Enter city name (e.g., Abuja, Kano)"
+            required
+            autocomplete="off"
+          />
+        </div>
+        <button type="submit" class="search-btn">
+          <span>Get Weather</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+        </button>
+      </form>
+
+     <div class="popular-cities">
+  <p class="popular-label">Popular cities:</p>
+  <div class="city-tags">
+    <button type="button" class="city-tag" onclick="document.querySelector('input[name=CityName]').value='Abuja'">Abuja</button>
+    <button type="button" class="city-tag" onclick="document.querySelector('input[name=CityName]').value='Kano'">Kano</button>
+    <button type="button" class="city-tag" onclick="document.querySelector('input[name=CityName]').value='Lagos'">Lagos</button>
+    <button type="button" class="city-tag" onclick="document.querySelector('input[name=CityName]').value='Kaduna'">Kaduna</button>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
